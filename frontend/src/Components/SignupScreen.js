@@ -12,6 +12,7 @@ import { signup } from "../Services/Actions/action";
 import { toast } from "react-toastify";
 
 function SignupScreen() {
+  document.title="SignUp"
   const navigate = useNavigate();
   const dispatch = useDispatch()
   const { search } = useLocation();

@@ -12,6 +12,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { activeuser, signin } from "../Services/Actions/action";
 
 function SigninScreen() {
+  document.title="SignIN"
   const navigate = useNavigate();
   const dispatch = useDispatch()
   const { search } = useLocation();
@@ -38,6 +39,7 @@ userInfo = useSelector((state)=>state.Users.registerduser)
      }
   }
   return (
+    
     <Container className="small-container">
      
       <h1 className="my-3">Sign In</h1>
@@ -60,6 +62,7 @@ userInfo = useSelector((state)=>state.Users.registerduser)
         </div>
       </Form>
     </Container>
+   
   );
 }
 

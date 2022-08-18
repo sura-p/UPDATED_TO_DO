@@ -17,6 +17,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { signout } from './Services/Actions/action';
 import { Navigate } from 'react-router';
 import { useNavigate } from 'react-router';
+import { useEffect } from 'react';
 
 function App() {
   const dispatch= useDispatch()
@@ -27,6 +28,10 @@ function App() {
   navigate("/");
  
 }
+
+useEffect(()=>{
+
+},[userInfo])
   return (
 
 <div className="d-flex flex-column site-container">

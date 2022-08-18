@@ -5,6 +5,7 @@ import {GoPlus} from 'react-icons/go'
 import { addtodos, completed, deletetodo, updatetodo } from '../Services/Actions/action'
 import DisplayTodos from './DisplayTodos'
 function ToDo() {
+  document.title="TO-DO-APP"
     const inputref=useRef(true)
     const store = useSelector(state=>state.Todos)
     const activeuser = useSelector(state=>state.Users.activeusers?.email);
