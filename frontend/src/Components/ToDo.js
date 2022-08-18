@@ -7,7 +7,7 @@ import DisplayTodos from './DisplayTodos'
 function ToDo() {
     const inputref=useRef(true)
     const store = useSelector(state=>state.Todos)
-    const activeuser = useSelector(state=>state.Todos.activeusers.email);
+    const activeuser = useSelector(state=>state.Users.activeusers?.email);
   console.log(activeuser);
     const dispatch = useDispatch()
     const [todo,settodo]=useState('')
@@ -44,7 +44,10 @@ function ToDo() {
     }
     
   return (
+    <>
+    
     <div className='.addTodos'>
+
         <Form onSubmit={handelSubmit} className='addTodos'>
         <Form.Group className="mb-3" controlId="formBasicEmail">
         
@@ -58,6 +61,7 @@ function ToDo() {
         <DisplayTodos/>
        
     </div>
+    </>
   )
 }
 

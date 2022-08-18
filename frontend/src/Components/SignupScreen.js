@@ -30,7 +30,7 @@ userInfo = useSelector((state)=>state.Todos.users)
       toast.error("password do not match");
       return;
     }
-    dispatch(signup({email:email,password:password}))
+    dispatch(signup({email:email,password:password ,name:name}))
     localStorage.setItem('userInfo',JSON.stringify(email,password))
     navigate(redirect || '/');
 }
@@ -78,7 +78,7 @@ userInfo = useSelector((state)=>state.Todos.users)
           <Form.Control type="Password" placeholder="Enter email" required  onChange={(e)=>setcnfpass(e.target.value)}/>
         </Form.Group>
         <div className="mb-3">
-          <Button type="submit">Sign In</Button>
+          <Button type="submit">Sign Up</Button>
         </div>
 
         <div className="mb-3">

@@ -19,7 +19,7 @@ function SigninScreen() {
  // const redirect = redirectInUrl ? redirectInUrl : "/";
   const [email,setemail] = useState('');
   const [password,setpass] = useState('');const 
-userInfo = useSelector((state)=>state.Todos.users)
+userInfo = useSelector((state)=>state.Users.registerduser)
   const submitHandler = async (e) => {
     e.preventDefault();
    const check = userInfo.some((item) =>
@@ -27,7 +27,11 @@ userInfo = useSelector((state)=>state.Todos.users)
      );
      if(check){
      navigate("/todo")
-     dispatch(activeuser({email:email}))
+     const user = userInfo.find((item) =>
+      item.email ===email && item.password === password 
+   );
+   console.log(user);
+     dispatch(activeuser({email:user.email,name:user.name}))
      }
      else{
        toast.error("Credential are not matched")
@@ -49,7 +53,7 @@ userInfo = useSelector((state)=>state.Todos.users)
         <div className="mb-3">
           <Button type="submit">Sign In</Button>
         </div>
-
+        
         <div className="mb-3">
           New Customer?{" "}
           <Link to={`/signin`}>Create your account</Link>

@@ -5,7 +5,7 @@ import ToDoitems from './ToDoitems'
 
 function DisplayTodos() {
     const store = useSelector(state=>state.Todos)
-    const activeuser = useSelector(state=>state.Todos.activeusers.email);
+    const activeuser = useSelector(state=>state.Users.activeusers?.email);
     const[sort,setsort]=useState("active")
   return (
     <div className='displaytodos'>

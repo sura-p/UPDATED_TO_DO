@@ -43,3 +43,9 @@ export const activeuser=(data)=>{
     dispatch({ type: 'ACTIVE_USERS' ,payload:data});
   }
 }
+
+export const signout =()=>{
+  return(dispatch)=>{
+    dispatch({ type: 'SIGNOUT' });
+  }
+}

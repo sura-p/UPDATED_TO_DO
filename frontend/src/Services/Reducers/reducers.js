@@ -1,7 +1,6 @@
 const initialState ={
         todos:[],
-        users:[],
-        activeusers:[]
+       
         
 }
 
@@ -64,18 +63,25 @@ const initialState ={
                     todos:completed
                 }
 
-                case "SIGN_UP":
-                    return{
-                        ...state,
-                        users:[...state.users,action.payload.data]
-                    }
+                // case "SIGN_UP":
+                //     return{
+                //         ...state,
+                //         users:[...state.users,action.payload.data]
+                //     }
 
-                case 'ACTIVE_USERS':
-                    console.log(action.payload);
-                    return{
-                        ...state,
-                        activeusers:action.payload
-                    }
+                // case 'ACTIVE_USERS':
+                //     console.log(action.payload);
+                //     return{
+                //         ...state,
+                //         activeusers:action.payload
+                //     }
+
+                //     case "SIGNOUT":
+
+                //         return{
+                //                   ...state,activeusers:null
+                //         }
+                  
                
          default:
              return state
